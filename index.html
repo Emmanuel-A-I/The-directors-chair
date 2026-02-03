@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>O Spike Film Academy Presents "The Directors Chair"</title>
+    <title>O Spaik Film Academy Presents "The Directors Chair"</title>
     <!-- Import Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -156,7 +156,10 @@
             flex-wrap: wrap;
             gap: 1rem;
         }
-        
+        .hero-badge a{
+            text-decoration: none;
+            color: #fff;
+        }
         .header-logo {
             width: 80px;
             height: 50px;
@@ -244,11 +247,13 @@
             font-size: 0.85rem;
             font-weight: 600;
             width: fit-content;
-            border: 1px solid rgba(212, 175, 55, 0.3);
+            border: 2px solid rgba(212, 175, 55, 0.3);
             text-transform: uppercase;
             letter-spacing: 1.5px;
             font-family: 'Cinzel', serif;
             margin: 0 auto;
+            border-radius: 10px;
+            box-shadow: #B8860B;
         }
         
         .hero-title {
@@ -502,23 +507,21 @@
             font-weight: 600;
         }
         
-        /* Registration Section - Full Screen */
+        /* Registration Section */
         .registration-section {
             position: relative;
             width: 100%;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
             padding: 6rem 0 3rem;
             background: var(--dark);
+            text-align: center;
         }
         
         .form-header {
             text-align: center;
             margin-bottom: 2.5rem;
             max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
             padding: 0 1.5rem;
         }
         
@@ -548,41 +551,39 @@
             max-width: 600px;
             margin: 0 auto;
             line-height: 1.7;
+            margin-bottom: 2rem;
         }
         
-        /* Full Screen Form Container */
-        .fullscreen-form-container {
-            width: 100%;
-            height: calc(100vh - 180px);
-            max-width: 1000px;
-            margin: 0 auto;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
-            border: 1px solid rgba(212, 175, 55, 0.2);
-            background: var(--white);
-        }
-        
-        .fullscreen-form-container iframe {
-            width: 100%;
-            height: 100%;
+        .btn {
+            width: 220px;
+            padding: 15px 30px;
+            background-color: var(--gold);
+            color: var(--black);
+            border-radius: 10px;
             border: none;
+            margin: auto;
+            font-family: 'Cinzel', serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: var(--transition);
             display: block;
         }
         
-        /* Form Loading State */
-        .form-loading {
+        .btn:hover {
+            background-color: var(--gold-light);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
+        }
+        
+        .btn a {
+            text-decoration: none;
+            color: var(--black);
+            display: block;
             width: 100%;
             height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: var(--dark);
-            font-size: 1.1rem;
-            background: var(--white);
-            text-align: center;
-            padding: 2rem;
         }
         
         /* Presenter Footer */
@@ -708,10 +709,6 @@
             .form-title {
                 font-size: 2.8rem;
             }
-            
-            .fullscreen-form-container {
-                height: calc(100vh - 220px);
-            }
         }
         
         @media (min-width: 1024px) {
@@ -730,11 +727,6 @@
             .form-title {
                 font-size: 3rem;
             }
-            
-            .fullscreen-form-container {
-                max-width: 1100px;
-                height: calc(100vh - 200px);
-            }
         }
         
         @media (min-width: 1280px) {
@@ -744,10 +736,6 @@
             
             .hero-visual {
                 height: 600px;
-            }
-            
-            .fullscreen-form-container {
-                max-width: 1200px;
             }
         }
         
@@ -828,8 +816,10 @@
                 font-size: 1rem;
             }
             
-            .fullscreen-form-container {
-                height: calc(100vh - 160px);
+            .btn {
+                width: 200px;
+                padding: 12px 25px;
+                font-size: 1rem;
             }
             
             .presenter-footer-badge {
@@ -846,7 +836,7 @@
             <div class="loading-logo">
                 <img src="logo.png" alt="Director's Chair Logo">
             </div>
-            <div class="loading-text">O Spike Film Academy<br>Presents</div>
+            <div class="loading-text">O Spaik Film Academy<br>Presents</div>
             <div class="loading-subtext">"The Directors Chair"</div>
             <div class="loading-progress">
                 <div class="loading-progress-bar"></div>
@@ -863,9 +853,8 @@
                     <img src="logo.png" alt="Logo">
                 </div>
                 <div class="header-title">
-                    <div class="main-title">O Spike Film Academy Presents</div>
+                    <div class="main-title">O Spaik Film Academy Presents</div>
                 </div>
-               
             </div>
         </header>
 
@@ -883,7 +872,9 @@
                     FEBRUARY 28, 2024
                 </div>
                     
-                    <div class="hero-badge">EXCLUSIVE EVENT SERIES</div>
+                    <div class="hero-badge">
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdwzFntz39aLoBQhfY_V4q4lWImqBGirzlH8_qrHxtY9ongTQ/viewform?usp=header">Secure Your Spot</a>
+                    </div>
                     
                     <p class="hero-subtitle">
                         Where experienced directors take the seat to share their stories, inspirations, and real industry experiences. 
@@ -951,27 +942,24 @@
                 </div>
             </section>
 
-            <!-- Registration Section - Full Screen -->
+            <!-- Registration Section -->
             <section class="registration-section" id="registration-form">
                 <div class="form-header">
                     <h2 class="form-title">Reserve Your Seat</h2>
-                    <p class="form-subtitle">Limited seats available for this exclusive event. Complete the form below to secure your spot in The Director's Chair.</p>
+                    <p class="form-subtitle">Limited seats available for this exclusive event. Join us for an unforgettable evening of insights and inspiration at The Director's Chair.</p>
                 </div>
                 
-                <div class="fullscreen-form-container">
-                    <!-- Google Form iframe -->
-                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdwzFntz39aLoBQhfY_V4q4lWImqBGirzlH8_qrHxtY9ongTQ/viewform?embedded=true" 
-                            width="100%" 
-                            height="100%">
-                        Loading…
-                    </iframe>
-                </div>
+                <button class="btn">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdwzFntz39aLoBQhfY_V4q4lWImqBGirzlH8_qrHxtY9ongTQ/viewform?usp=header" target="_blank">
+                        Register Now
+                    </a>
+                </button>
             </section>
 
             <!-- Presenter Footer -->
             <section class="presenter-footer">
                 <div class="presenter-footer-badge">
-                    Presented by O Spike Film Academy
+                    Presented by O Spaik Film Academy
                 </div>
             </section>
 
@@ -981,8 +969,8 @@
                     <img src="logo.png" alt="Logo">
                 </div>
                 <div class="footer-text">
-                    <p>The Director's Chair is an exclusive event series presented by O Spike Film Academy.</p>
-                    <p>© 2024 O Spike Film Academy. All rights reserved.</p>
+                    <p>The Director's Chair is an exclusive event series presented by O Spaik Film Academy.</p>
+                    <p>© 2024 O Spaik Film Academy. All rights reserved.</p>
                 </div>
             </footer>
         </div>
@@ -1051,31 +1039,6 @@
                 card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
                 observer.observe(card);
             });
-            
-            // Form iframe loading indicator
-            const formIframe = document.querySelector('.fullscreen-form-container iframe');
-            if (formIframe) {
-                formIframe.onload = function() {
-                    console.log('Google Form loaded successfully');
-                };
-                
-                formIframe.onerror = function() {
-                    console.log('Error loading Google Form');
-                    const container = document.querySelector('.fullscreen-form-container');
-                    if (container) {
-                        container.innerHTML = `
-                            <div class="form-loading">
-                                <p style="color: var(--gold); font-size: 1.3rem; margin-bottom: 1rem; font-weight: bold;">Unable to load the registration form.</p>
-                                <p style="margin-bottom: 1rem;">Please visit the form directly at:</p>
-                                <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSdwzFntz39aLoBQhfY_V4q4lWImqBGirzlH8_qrHxtY9ongTQ/viewform" 
-                                     style="color: var(--gold); text-decoration: underline; font-weight: bold;">
-                                    Direct Form Link
-                                </a></p>
-                            </div>
-                        `;
-                    }
-                };
-            }
             
             // Header scroll effect
             let lastScroll = 0;
