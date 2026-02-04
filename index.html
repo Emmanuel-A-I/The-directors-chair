@@ -72,6 +72,29 @@
             filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.3));
         }
         
+        .loading-academy-image {
+            width: 320px;
+            max-width: 80%;
+            margin: 0 auto 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .loading-academy-image img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+        
+        .loading-presents {
+            color: var(--white);
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+            font-family: 'Cinzel', serif;
+            letter-spacing: 1px;
+        }
+        
         .loading-text {
             font-family: 'Cinzel', serif;
             font-size: 2.2rem;
@@ -156,13 +179,15 @@
             flex-wrap: wrap;
             gap: 1rem;
         }
+        
         .hero-badge a{
             text-decoration: none;
             color: #fff;
         }
+        
         .header-logo {
-            width: 80px;
-            height: 50px;
+            width: 120px;
+            height: 60px;
             transition: var(--transition);
         }
         
@@ -171,6 +196,27 @@
             height: 100%;
             object-fit: contain;
             filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.3));
+        }
+        
+        .academy-image-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .academy-image {
+            width: 250px; /* Increased width */
+            height: auto;
+            object-fit: contain;
+        }
+        
+        .presents-text {
+            color: var(--white);
+            font-size: 1rem;
+            margin-top: 0.3rem;
+            font-family: 'Cinzel', serif;
+            letter-spacing: 1px;
         }
         
         .header-title {
@@ -263,7 +309,7 @@
             line-height: 1.1;
             color: var(--white);
             position: relative;
-            margin-bottom: 1rem;
+            margin-top: 4rem;
         }
         
         .hero-title span {
@@ -469,6 +515,77 @@
             font-family: 'Cinzel', serif;
         }
         
+        /* Location & Time Section */
+        .location-time-section {
+            margin: 2.5rem auto;
+            max-width: 400px;
+            text-align: center;
+        }
+        
+        .location-time-card {
+            background: rgba(212, 175, 55, 0.08);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 5px;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .location-time-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--gold-dark), var(--gold), var(--gold-light));
+        }
+        
+        .location-time-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.6rem;
+            color: var(--gold);
+            margin-bottom: 1.5rem;
+            letter-spacing: 1px;
+        }
+        
+        .location-details {
+            margin-bottom: 1.5rem;
+        }
+        
+        .location-address {
+            font-size: 1.1rem;
+            color: var(--white);
+            line-height: 1.6;
+            margin-bottom: 0.5rem;
+        }
+        
+        .location-landmark {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.8);
+            font-style: italic;
+        }
+        
+        .time-details {
+            padding-top: 1rem;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        
+        .time-label {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 0.5rem;
+        }
+        
+        .time-value {
+            font-family: 'Cinzel', serif;
+            font-size: 1.8rem;
+            color: var(--gold-light);
+            font-weight: 600;
+        }
+        
         /* Date Card */
         .date-card {
             background: rgba(212, 175, 55, 0.05);
@@ -593,6 +710,27 @@
             background: rgba(0, 0, 0, 0.5);
         }
         
+        .presenter-footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .presenter-footer-image {
+            width: 300px; /* Increased width */
+            max-width: 80%;
+            height: auto;
+            object-fit: contain;
+        }
+        
+        .presenter-footer-text {
+            color: var(--white);
+            font-size: 1rem;
+            font-family: 'Cinzel', serif;
+            letter-spacing: 1px;
+        }
+        
         .presenter-footer-badge {
             display: inline-block;
             background: rgba(212, 175, 55, 0.1);
@@ -616,8 +754,8 @@
         }
         
         .footer-logo {
-            width: 60px;
-            height: 60px;
+            width: 200px; /* Increased width */
+            height: auto;
             margin: 0 auto 1.5rem;
         }
         
@@ -652,8 +790,8 @@
                 height: 450px;
             }
             
-            .header-title .main-title {
-                font-size: 1.6rem;
+            .academy-image {
+                width: 280px; /* Increased for larger screens */
             }
             
             .header-date {
@@ -709,6 +847,10 @@
             .form-title {
                 font-size: 2.8rem;
             }
+            
+            .academy-image {
+                width: 300px; /* Increased for tablet screens */
+            }
         }
         
         @media (min-width: 1024px) {
@@ -727,6 +869,14 @@
             .form-title {
                 font-size: 3rem;
             }
+            
+            .academy-image {
+                width: 320px; /* Increased for desktop */
+            }
+            
+            .presenter-footer-image {
+                width: 350px; /* Increased for desktop */
+            }
         }
         
         @media (min-width: 1280px) {
@@ -736,6 +886,10 @@
             
             .hero-visual {
                 height: 600px;
+            }
+            
+            .academy-image {
+                width: 350px; /* Maximum size */
             }
         }
         
@@ -826,6 +980,30 @@
                 padding: 0.8rem 1.5rem;
                 font-size: 1rem;
             }
+            
+            .academy-image {
+                width: 200px; /* Adjusted for mobile */
+            }
+            
+            .presenter-footer-image {
+                width: 220px; /* Adjusted for mobile */
+            }
+            
+            .location-time-card {
+                padding: 1.5rem;
+            }
+            
+            .location-time-title {
+                font-size: 1.4rem;
+            }
+            
+            .location-address {
+                font-size: 1rem;
+            }
+            
+            .time-value {
+                font-size: 1.5rem;
+            }
         }
     </style>
 </head>
@@ -836,8 +1014,12 @@
             <div class="loading-logo">
                 <img src="logo.png" alt="Director's Chair Logo">
             </div>
-            <div class="loading-text">OSpaik Film Academy<br>Presents</div>
-            <div class="loading-subtext">"The Directors Chair"</div>
+            <div class="loading-academy-image">
+                <img src="ace.png" alt="OSpaik Film Academy">
+                <div class="loading-presents">presents</div>
+            </div>
+            <div class="loading-text">"The Directors Chair"</div>
+            <div class="loading-subtext">An Exclusive Director's Event</div>
             <div class="loading-progress">
                 <div class="loading-progress-bar"></div>
             </div>
@@ -853,7 +1035,10 @@
                     <img src="logo.png" alt="Logo">
                 </div>
                 <div class="header-title">
-                    <div class="main-title">OSpaik Film Academy Presents</div>
+                    <div class="academy-image-container">
+                        <img src="ace.png" alt="OSpaik Film Academy" class="academy-image">
+                        <div class="presents-text">presents</div>
+                    </div>
                 </div>
             </div>
         </header>
@@ -934,6 +1119,21 @@
                         <p>To sit in the same room with industry professionals, hear how they started, what shaped them, and ask the questions that matter.</p>
                     </div>
                     
+                    <!-- Location & Time Section -->
+                    <div class="location-time-section">
+                        <div class="location-time-card">
+                            <h3 class="location-time-title">Event Details</h3>
+                            <div class="location-details">
+                                <div class="location-address">OKPARA AVENUE</div>
+                                <div class="location-landmark">At No -1 station road by subway Enugu</div>
+                            </div>
+                            <div class="time-details">
+                                <div class="time-label">Time</div>
+                                <div class="time-value">10 AM</div>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <div class="date-card">
                         <h3>Mark Your Calendar</h3>
                         <div class="date-number">28</div>
@@ -957,17 +1157,16 @@
             </section>
 
             <!-- Presenter Footer -->
-            <section class="presenter-footer">
-                <div class="presenter-footer-badge">
-                    Presented by OSpaik Film Academy
+            <section class="presenter-footer hero-badge">
+                <div class="presenter-footer-content">
+                    <img src="ace.png" alt="OSpaik Film Academy" class="presenter-footer-image">
+                    <div class="presenter-footer-text" style="width: 100%;"><img src="emp.png" style="width: 100%;" alt=""></div>
                 </div>
             </section>
 
             <!-- Footer -->
             <footer class="footer">
-                <div class="footer-logo">
-                    <img src="logo.png" alt="Logo">
-                </div>
+           
                 <div class="footer-text">
                     <p>The Director's Chair is an exclusive event series presented by OSpaik Film Academy.</p>
                     <p>© 2024 OSpaik Film Academy. All rights reserved.</p>
@@ -1039,6 +1238,15 @@
                 card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
                 observer.observe(card);
             });
+            
+            // Animate location-time card
+            const locationCard = document.querySelector('.location-time-card');
+            if (locationCard) {
+                locationCard.style.opacity = '0';
+                locationCard.style.transform = 'translateY(20px)';
+                locationCard.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(locationCard);
+            }
             
             // Header scroll effect
             let lastScroll = 0;
